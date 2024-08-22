@@ -17,6 +17,12 @@
     <meta name="twitter:card" content="summary_large_image" />
   {/if}
 </svelte:head>
+
+<ul>
+  <li><a href="/">English</a></li>
+  <li><a href="/he">Hebrew</a></li>
+</ul>
+
 <main>
   <slot />
 </main>

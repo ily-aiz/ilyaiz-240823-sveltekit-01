@@ -1,10 +1,5 @@
-export function match(param: string): boolean {
-  const isRTL = param === 'he';
-
-  if (typeof document !== 'undefined') {
-    document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
-    document.documentElement.lang = 'he';
-  }
-
-  return isRTL;
+export function match(param) {
+  console.log({ lang: { param } });
+  console.log(param === 'he');
+  return param === 'he';
 }

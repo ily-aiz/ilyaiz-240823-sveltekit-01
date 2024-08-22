@@ -2,10 +2,12 @@ import { asText } from '@prismicio/client';
 
 import { createClient } from '$lib/prismicio';
 
-export async function load({ fetch, cookies }) {
+export async function load({ fetch, cookies, params }) {
   const client = createClient({ fetch, cookies });
 
-  const page = await client.getByUID('page', 'home');
+  const page = await client.getByUID('page', 'home', {
+    lang: params.lang || 'en-us'
+  });
 
   return {
     page,

@@ -1,4 +1,5 @@
 import { asText } from '@prismicio/client';
+
 import { createClient } from '$lib/prismicio';
 
 export async function load({ params, fetch, cookies }) {
@@ -23,9 +24,6 @@ export async function entries() {
   const pages = await client.getAllByType('page');
 
   return pages.map((page) => {
-    return {
-      uid: page.uid,
-      lang: page.lang || 'en-us' // Add the lang parameter
-    };
+    return { uid: page.uid };
   });
 }

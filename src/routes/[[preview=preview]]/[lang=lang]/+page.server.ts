@@ -1,4 +1,5 @@
 import { asText } from '@prismicio/client';
+
 import { createClient } from '$lib/prismicio';
 
 export async function load({ fetch, cookies, params }) {
@@ -18,10 +19,5 @@ export async function load({ fetch, cookies, params }) {
 }
 
 export function entries() {
-  // Return an array of objects with the required 'lang' property
-  return [
-    { lang: 'en-us' },
-    { lang: 'he' }
-    // Add other languages as needed
-  ];
+  return [{}];
 }
